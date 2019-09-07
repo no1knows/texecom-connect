@@ -45,6 +45,8 @@ client = paho.Client()
 client.on_message=on_message
 
 print("connecting to broker ", broker_url)
+# Uncomment the following line to use MQTT authentication
+# client.username_pw_set(username='MQTT USER',password='MQTT PASSWORD)
 client.connect(broker_url, broker_port)
 client.loop_start()
 
